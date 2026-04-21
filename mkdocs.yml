@@ -62,7 +62,9 @@ markdown_extensions:
   - tables
 plugins:
   - search
-  - privacy
+  - privacy:
+      assets_exclude:
+        - gist.githubusercontent.com/*
   - social:
       enabled: !ENV [CI, false]
       cards_layout_options:
