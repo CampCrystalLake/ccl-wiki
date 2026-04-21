@@ -30,10 +30,9 @@ async function update_status_widgets() {
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
 
     const data = await res.json();
-    const stale = Date.now() - new Date(data.updated_at).getTime() > 5 * 60 * 1000;
-    const label = !data.online || stale
-      ? "Offline"
-      : `${data.players} online`;
+    const stale =
+      Date.now() - new Date(data.updated_at).getTime() > 5 * 60 * 1000;
+    const label = !data.online || stale ? "Offline" : `${data.players} online`;
     targets.forEach((el) => (el.textContent = label));
   } catch {
     document
