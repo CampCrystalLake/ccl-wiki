@@ -11,9 +11,9 @@ Licensed under MIT.
 
 ## About
 
-Friday the 13th: The Game shut down its official servers in 2024, taking the game offline on every platform. Over the years, pieces of the community kept chipping away at bringing it back -- a lot of people put real work into figuring out the protocol, the auth flow, the stats pipeline, long before we did.
+Friday the 13th: The Game shut down its official servers in 2024, taking the game offline on every platform. Other community servers exist on PC, but nothing proper on PlayStation -- until [Camp Crystal Lake](https://discord.gg/dn4pacGHe3) went live on January 25, 2026 as the first real PSN revival, built on top of years of community protocol work.
 
-The [Camp Crystal Lake](https://discord.gg/dn4pacGHe3) community server went live on PlayStation on January 25, 2026, standing on all of that prior work. This repo is the wiki for it -- the player-facing docs, the hosting guide for [ccl-server](https://codeberg.org/CampCrystalLake/ccl-server), and the community pages.
+This repo is the wiki for it -- player-facing docs, the hosting guide for [ccl-server](https://codeberg.org/CampCrystalLake/ccl-server), and community pages.
 
 ## License
 
