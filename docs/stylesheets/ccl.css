@@ -1,0 +1,193 @@
+/* camp crystal lake */
+
+:root > * {
+  --ccl-accent: #cf1b25;
+  --ccl-bg: #111108;
+  --ccl-bg-light: #202011;
+  --ccl-fg: #ccc4c8;
+  --ccl-fg-muted: #5d594d;
+  --ccl-warm-gray: #6d6758;
+  --ccl-dark-red: #470b0d;
+}
+
+.md-header,
+.md-tabs {
+  background: var(--ccl-bg);
+  color: var(--ccl-fg) !important;
+}
+
+.md-footer,
+.md-footer-meta {
+  background-color: var(--ccl-bg);
+}
+
+[data-md-color-scheme="slate"] {
+  --md-default-fg-color: var(--ccl-fg);
+  --md-default-bg-color: var(--ccl-bg);
+  --md-accent-fg-color: var(--ccl-accent);
+  --md-typeset-a-color: var(--ccl-accent);
+
+  background-image: url(../assets/background.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.md-header--shadow {
+  box-shadow:
+    0 0 0.2rem hsl(from var(--ccl-accent) h s l / 0.5),
+    0 0.2rem 0.4rem hsl(from var(--ccl-accent) h s l / 0.2);
+  border-bottom: 1px solid var(--ccl-accent);
+}
+
+.md-footer {
+  box-shadow:
+    0 0.2rem 0.4rem hsl(from var(--ccl-accent) h s l / 0.2),
+    0 0 0.2rem hsl(from var(--ccl-accent) h s l / 0.5);
+  border-top: 1px solid var(--ccl-accent);
+}
+
+.md-search__input {
+  color: var(--ccl-fg) !important;
+}
+
+.md-search__input::placeholder {
+  color: var(--ccl-fg) !important;
+}
+
+.md-search__icon {
+  color: var(--ccl-fg) !important;
+}
+
+.md-nav__title {
+  box-shadow: none !important;
+  background: none !important;
+  color: var(--ccl-fg) !important;
+}
+
+.md-sidebar--primary .md-nav__item--section > .md-nav__link {
+  box-shadow: none !important;
+  background: none !important;
+  color: var(--ccl-fg) !important;
+}
+
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4,
+.md-typeset h5,
+.md-typeset h6 {
+  color: var(--ccl-fg) !important;
+}
+
+/* admonitions */
+.md-typeset .admonition,
+.md-typeset details {
+  border-color: var(--ccl-accent) !important;
+  border-radius: 0.2rem;
+}
+
+.md-typeset .admonition-title,
+.md-typeset details > summary {
+  border-color: var(--ccl-accent) !important;
+  background-color: hsl(from var(--ccl-accent) h s l / 0.1) !important;
+}
+
+.md-typeset .admonition-title::before,
+.md-typeset details > summary::before {
+  background-color: var(--ccl-accent) !important;
+}
+
+.md-typeset details > summary::after {
+  background-color: var(--ccl-fg) !important;
+}
+
+.md-typeset details > summary {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.md-typeset details > summary:focus,
+.md-typeset details > summary:focus-visible,
+.md-typeset details > summary:focus-within {
+  outline: none;
+  box-shadow: none;
+}
+
+.md-typeset .admonition:focus-within,
+.md-typeset details:focus-within,
+.md-typeset .admonition.info:focus-within,
+.md-typeset details.info:focus-within {
+  box-shadow: none !important;
+}
+
+.md-typeset details > summary::selection,
+.md-typeset details > summary *::selection {
+  background: transparent;
+}
+
+/* code blocks */
+.md-typeset code {
+  background-color: var(--ccl-bg);
+  color: var(--ccl-fg);
+}
+
+.md-typeset pre > code {
+  background-color: var(--ccl-bg);
+  border-radius: 0.2rem;
+}
+
+.md-code__nav,
+:hover > .md-code__nav {
+  background-color: var(--ccl-bg) !important;
+}
+
+.md-code__button,
+:hover > * > .md-code__button {
+  color: var(--ccl-fg) !important;
+}
+
+.md-code__button:hover,
+.md-code__button:focus {
+  color: var(--ccl-accent) !important;
+}
+
+/* tables */
+.md-typeset__table {
+  display: block !important;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 !important;
+}
+
+.md-typeset table:not([class]) {
+  border: 1px solid var(--ccl-fg-muted);
+  border-radius: 0.2rem;
+  overflow: hidden;
+  width: 100%;
+  display: table;
+}
+
+.md-typeset table:not([class]) th {
+  background-color: var(--ccl-bg-light);
+  color: var(--ccl-fg);
+}
+
+.md-typeset table:not([class]) td {
+  border-top: 1px solid var(--ccl-fg-muted);
+}
+
+/* grid cards */
+.md-typeset .grid.cards > ul > li {
+  box-shadow: var(--md-shadow-z1);
+  border: 0.05rem solid hsl(from var(--ccl-accent) h s l / 0.4) !important;
+  background-color: hsl(from var(--ccl-accent) h s l / 0.1);
+  border-radius: 0.2rem !important;
+}
+
+.md-typeset .grid.cards > ul > li:hover {
+  border-color: hsl(from var(--ccl-accent) h s l / 0.8) !important;
+  box-shadow: var(--md-shadow-z1);
+}

@@ -1,0 +1,76 @@
+site_name: Camp Crystal Lake
+site_url: https://campcrystallake.xyz
+site_description: Gun Media pulled the plug on Friday the 13th. We plugged it back in.
+site_author: Camp Crystal Lake
+theme:
+  name: material
+  custom_dir: overrides
+  logo: assets/logo.png
+  favicon: assets/favicons/favicon.ico
+  palette:
+    scheme: slate
+    primary: ccl
+    accent: ccl
+  features:
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.expand
+    - navigation.path
+    - navigation.indexes
+    - navigation.instant
+    - navigation.footer
+    - content.code.copy
+    - content.tabs.link
+  font:
+    text: Inter
+extra_css:
+  - stylesheets/ccl.css
+extra_javascript:
+  - stylesheets/custom.js
+nav:
+  - Home: index.md
+  - Play:
+      - Join The Server: guides/joining/getting-started.md
+      - Stats & Progress: guides/joining/stats.md
+      - Trophies: guides/joining/trophies.md
+  - Host:
+      - Host Your Own: guides/hosting/getting-started.md
+  - Community:
+      - About: guides/community/about.md
+      - Rules: guides/community/rules.md
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html
+  - abbr
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.tabbed:
+      alternate_style: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - tables
+plugins:
+  - search
+  - privacy
+  - social:
+      enabled: !ENV [CI, false]
+      cards_layout_options:
+        background_color: "#111108"
+        color: "#ccc4c8"
+extra:
+  social:
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/dn4pacGHe3
+    - icon: simple/codeberg
+      link: https://codeberg.org/CampCrystalLake
